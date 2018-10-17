@@ -1,17 +1,9 @@
 <template>
 <div>
-  
-  <header class="v-header container">
-    <div class="fullscreen-video-wrap">
-      <video muted src="static/surf.mp4" autoplay="true" loop="true" type="video/mp4"></video>
-    </div>
-    <div class="header-overlay"></div>
-    <div class="header-content text-md-center">
-      <h1>Need a Landing Page?</h1>
-      <p>Contact me!</p>
-      <a href="https://web.telegram.org/#/im?p=@RFahreev" class="btn"><img src="static/tglink.png" alt=""></a>
-    </div>
-  </header>
+  <video-bg class="videobg" :sources="['static/surf.mp4']"> 
+  <div class="header-overlay"></div>
+  <div class="cta">If you want to add content here, a slot is waiting!</div>
+</video-bg>
 
 
 
@@ -37,42 +29,33 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 
-
-.v-header{
-  height:100vh;
-  display:flex;
-  align-items:center;
-  color:#fff;
-  /* z-index: 5; */
+.videobg{
+  text-align: center;
 }
 
-.container{
-  max-width:960px;
-  padding-left:1rem;
-  padding-right:1rem;
-  margin:auto;
-  text-align:center;
-  /* z-index: 6; */
+.cta{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: solid 1px;
+  padding: 20px;
+  z-index: 2;
+ 
 }
 
-.fullscreen-video-wrap{
-  position:absolute;
-  top:0;
-  left:0;
-  width:100%;
-  height:100vh;
-  overflow:hidden;
-  margin-left:auto;
-  margin-right:auto;
-  z-index:-100;
-  text-align:center;
+
+/* .cta:hover{ */
+  /* background: red; */
+  /* color: white; */
+  /* } */
+
+.cta:hover{
+  border: solid white 1px;
+  color: white;
+  font-weight: 500;
 }
 
-.fullscreen-video-wrap video{
-  min-height:100vh;
-  min-width:100%;
-  overflow:hidden;
-}
 
 .header-overlay{
   height:100vh;
@@ -81,45 +64,13 @@ export default {
   left:0;
   width:100%;
   z-index:1;
-  background:#225470;
-  opacity:0.65;
+  /* background:#225470; */
+  background:#000000;
+  opacity:0.35;
   overflow:hidden;
 }
 
-.header-content{
-  margin-left:auto;
-  margin-right:auto;
-  z-index:2;
 
-}
-
-.header-content h1{
-  font-size:50px;
-  margin-bottom:10px;
-}
-
-.header-content p{
-  font-size:1.5rem;
-  display:block;
-  padding-bottom:2rem;
-}
-
-
-.btn{
-  background: #34b3a0;
-  color:#fff;
-  font-size:1.2rem;
-  /* padding:auto; */
-  height: 100px;
-  width: 200px;
-  /* padding: 1rem 2rem; */
-  text-decoration: none;
-}
-
-.btn:hover{
-  background: #05B200;
-
-}
 
 @media(max-width:960px){
   .container{

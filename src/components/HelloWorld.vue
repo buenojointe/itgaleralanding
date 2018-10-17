@@ -3,11 +3,12 @@
 
     <nav >
     <div class="nav-wrapper">
-     <a href="#" class="brand-logo">Web Zone</a>
+     <a href="#" class="brand-logo">itgalera.io</a>
+     <!-- <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons"></i></a> -->
      <ul class="right hide-on-med-and-down">
        <li><a href="#" class="red">Home</a></li>
        <li><a href="#">Blog</a></li>
-       <li><a href="#">Theme</a></li>
+       <li><a href="#">Portfolio</a></li>
        <li><a href="#">About</a></li>
        <li><a href="#">Contact</a></li>
      </ul>
@@ -21,19 +22,14 @@
     
     <!-- 123 -->
   <Videocomponent/>
+  <Blogcomponent/>
+  <Portfoliocomponent/>
+  <Aboutcomponent/>
+  <Contactscomponent/>
+  
 
-    <section class="section section-a">
-    <div class="container">
-      <h2>Section A</h2>
-      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde, impedit amet minima iste autem cumque et maiores blanditiis doloribus aut dolorum quaerat non est voluptatum, tempore ut dolorem voluptas quod quae accusantium, ex inventore ducimus. Beatae mollitia exercitationem, quam similique, consectetur ratione reprehenderit delectus neque eligendi facere soluta dolor ducimus!</p>
-    </div>
-  </section>
-  <section class="section section-b">
-    <div class="container">
-      <h2>Section B</h2>
-      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde, impedit amet minima iste autem cumque et maiores blanditiis doloribus aut dolorum quaerat non est voluptatum, tempore ut dolorem voluptas quod quae accusantium, ex inventore ducimus. Beatae mollitia exercitationem, quam similique, consectetur ratione reprehenderit delectus neque eligendi facere soluta dolor ducimus!</p>
-    </div>
-  </section>
+
+
   
   
   </div>
@@ -45,11 +41,15 @@
 <script>
 
 import Videocomponent from './../nestedcomponents/Videocomponent'
+import Portfoliocomponent from './../nestedcomponents/Portfoliocomponent'
+import Blogcomponent from './../nestedcomponents/Blogcomponent'
+import Aboutcomponent from './../nestedcomponents/Aboutcomponent'
+import Contactscomponent from './../nestedcomponents/Contactscomponent'
 
 export default {
   name: 'HelloWorld',
   components: {
-    Videocomponent,
+    Videocomponent,Portfoliocomponent,Blogcomponent,Aboutcomponent,Contactscomponent
   },
   ready() {
 
@@ -74,33 +74,30 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 
+.brand-logo{
+  font-family: Work Sans;
+  font-size:250%;
+  font-weight: 400;
+
+}
+
     
-    nav{
-      position: fixed;
-      background: rgba(0, 0, 0, 0.2);
-      padding:0px 20px;
-      z-index: 100;
-    }
-
-
-    nav li a:hover{
-      background: red;
-    }
-
-
-
-.section{
-  padding:20px 0;
-  width: 100%;
-  /* border: solid 1px; */
-  margin:0;
+nav{
+  position: fixed;
+  background: rgba(0, 0, 0, 0.2);
+  padding:0px 20px;
+  z-index: 100;
 }
 
-.section-b{
-  background-color:#333;
-  color:#fff;
-  margin:0;
-  
-  /* border: solid red 2px; */
-}
+
+nav li a:hover{
+  background: red;
+  color: white;
+  }
+
+
+
+
+
+
 </style>

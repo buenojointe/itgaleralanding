@@ -9,6 +9,10 @@ Vue.config.productionTip = false
 
 import BootstrapVue from 'bootstrap-vue'
 
+import VideoBg from 'vue-videobg'
+
+Vue.component('video-bg', VideoBg)
+
 Vue.use(BootstrapVue);
 
 

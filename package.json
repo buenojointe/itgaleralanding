@@ -13,7 +13,8 @@
     "bootstrap-vue": "^2.0.0-rc.11",
     "vue": "^2.5.2",
     "vue-router": "^3.0.1",
-    "vue-video-background": "^0.1.2"
+    "vue-video-background": "^0.1.2",
+    "vue-videobg": "^2.0.0"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",
