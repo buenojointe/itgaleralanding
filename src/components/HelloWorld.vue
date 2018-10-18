@@ -21,9 +21,12 @@
    
     
     <!-- 123 -->
-  <Videocomponent/>
+  <YoutubeFullpagecomponent/>
+  <!-- <Videocomponent/> -->
+  
   <Blogcomponent/>
   <Portfoliocomponent/>
+  
   <Aboutcomponent/>
   <Contactscomponent/>
   
@@ -45,17 +48,13 @@ import Portfoliocomponent from './../nestedcomponents/Portfoliocomponent'
 import Blogcomponent from './../nestedcomponents/Blogcomponent'
 import Aboutcomponent from './../nestedcomponents/Aboutcomponent'
 import Contactscomponent from './../nestedcomponents/Contactscomponent'
+import YoutubeFullpagecomponent from './../nestedcomponents/YoutubeFullpagecomponent'
 
 export default {
   name: 'HelloWorld',
   components: {
-    Videocomponent,Portfoliocomponent,Blogcomponent,Aboutcomponent,Contactscomponent
+    Videocomponent,Blogcomponent,Portfoliocomponent,Aboutcomponent,Contactscomponent,YoutubeFullpagecomponent
   },
-  ready() {
-
-         console.log("hi?")
-     },
-
   data () {
     return {
       msg: 'Welcome to Your Vue.js App'

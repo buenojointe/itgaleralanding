@@ -1,34 +1,62 @@
 <template>
-    <div>
-        <section class="section section-a">
-    <div class="container">
-      <h2>Section Blog</h2>
-      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde, impedit amet minima iste autem cumque et maiores blanditiis doloribus aut dolorum quaerat non est voluptatum, tempore ut dolorem voluptas quod quae accusantium, ex inventore ducimus. Beatae mollitia exercitationem, quam similique, consectetur ratione reprehenderit delectus neque eligendi facere soluta dolor ducimus!</p>
-    </div>
-        </section>
+    <div class="section">
+        <div class="container">
+          <h2>Section Blog</h2>
+          <h1 class="title is-1">Your Window</h1>
+          <h2 class="title is-2">
+              Width: {{ window.width }},
+              Height: {{ window.height }}
+          </h2>
+
+        </div>
+        
+        
+
   </div>
 </template>
 
 <script>
 
+
+
 export default {
   name: 'Blog',
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App'
+      msg: 'Welcome to Your Vue.js App',
+      window: {
+      width: 0,
+      height: 0
     }
-  }
+    }
+  },
+  
 }
 </script>
 
+
 <style scoped>
 
-.section{
-  padding:20px 0;
-  width: 100%;
-  /* border: solid 1px; */
-  margin:0;
+
+.cta{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color:white;
+
 }
+
+
+
+
+
+.section{
+  width: 100%;
+  height: 100vh;
+  background-color: #D3D3D3;
+}
+
 
 
 </style>

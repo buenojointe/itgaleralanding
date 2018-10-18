@@ -8,11 +8,14 @@ Vue.config.productionTip = false
 
 
 import BootstrapVue from 'bootstrap-vue'
-
+// import VueYoutube from 'vue-youtube'
 import VideoBg from 'vue-videobg'
 
 Vue.component('video-bg', VideoBg)
 
+
+ 
+// Vue.use(VueYoutube)
 Vue.use(BootstrapVue);
 
 
@@ -22,5 +25,7 @@ new Vue({
   el: '#app',
   router,
   components: { App },
-  template: '<App/>'
-})
+  template: '<App/>',
+
+
+});
